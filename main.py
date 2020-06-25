@@ -1,8 +1,10 @@
 import csv
+import urllib.parse as url
 import urllib3
 import xml.etree.ElementTree as ET
 import time
 
+urllib3.disable_warnings()
 http = urllib3.PoolManager()
 compoundRestURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/"
 compoundURL = "https://pubchem.ncbi.nlm.nih.gov/compound/"
@@ -14,9 +16,10 @@ MAX_LINES = 100
 foundCosIngs = []
 notFoundCosIngs = []
 toxicityCosIngs = []
+therapeuticCosIngs = []
 
 def getCid(cname):
-    searchURL = compoundRestURL + "name/" + cname + "/XML"
+    searchURL = compoundRestURL + "name/" + url.quote(cname) + "/XML"
     results = http.request("GET", searchURL)
     if results.status == 200:
         doc = ET.fromstring(results.data)
@@ -45,32 +48,38 @@ def searchPubChemForCosIng():
             else:
                 notFoundCosIngs.append((cid, cname))
 
-            time.sleep(0.3)
+            # time.sleep(0.3)
         
-def hasToxicityInfo(cid):
-    searchURL = compoundViewURL + str(cid) + "/XML"
-    results = http.request("GET", searchURL)
-    if results.status == 200:
-        doc = ET.fromstring(results.data)
-        heading = doc.find(".//{http://pubchem.ncbi.nlm.nih.gov/pug_view}TOCHeading[.='Toxicity']")
-        if heading != None:
-            return True
-        else:
-            return False
-    else:
-        print("PUG View GET failed: " + str(results.status) + " for cid " + str(cid))
-        return False
+def hasToxicityInfo(doc):
+    heading = doc.find(".//{http://pubchem.ncbi.nlm.nih.gov/pug_view}TOCHeading[.='Toxicity']")
+    return heading != None
+
+def hasTherapeuticUse(doc):
+    heading = doc.find(".//{http://pubchem.ncbi.nlm.nih.gov/pug_view}TOCHeading[.='Therapeutic Uses']")
+    return heading != None
+
 
 searchPubChemForCosIng()
 
 print("Checking Compounds for Toxicity Information...")
 for compound in foundCosIngs:
     # print(str(compound[0]) + ", " + compound[1] + ", " + compound[2])
-    if hasToxicityInfo(compound[0]):
-        toxicityCosIngs.append(compound)
-        print("Toxicity Found [" + str(len(toxicityCosIngs)) + "]")
+    searchURL = compoundViewURL + str(compound[0]) + "/XML"
+    results = http.request("GET", searchURL)
+    if results.status == 200:
+        doc = ET.fromstring(results.data)
+        if hasToxicityInfo(doc):
+            toxicityCosIngs.append(compound)
+            print("Toxicity Found [" + str(len(toxicityCosIngs)) + "]")
+        if hasTherapeuticUse(doc):
+            therapeuticCosIngs.append(compound)
+            print("Therapeutic Uses Found [" + str(len(therapeuticCosIngs)) + "]")
+    else:
+        print("PUG View GET failed: " + str(results.status) + " for cid " + str(cid))
+
 
 print("Cosmetic Ingredients Searched: " + str(MAX_LINES))
 print("Compounds found on PubChem: " + str(len(foundCosIngs)))
 print("Compounds with Toxicity Information: " + str(len(toxicityCosIngs)))
+print("Compounds with Therapeutic Uses: " + str(len(therapeuticCosIngs)))
 print("Execution complete.")

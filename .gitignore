@@ -1,1 +1,6 @@
 /.DS_Store
+.vscode/*
+debug.log
+errors.log
+results.txt
+template.html

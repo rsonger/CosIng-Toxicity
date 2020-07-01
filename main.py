@@ -3,20 +3,38 @@ import urllib.parse as url
 import urllib3
 import xml.etree.ElementTree as ET
 import time
+import os
+import logging
 
-urllib3.disable_warnings()
+MAX_LINES = 2000
+
 http = urllib3.PoolManager()
+
 compoundRestURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/"
 compoundURL = "https://pubchem.ncbi.nlm.nih.gov/compound/"
 compoundViewURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/"
 datafile = "./data/COSING_Ingredients-Fragrance Inventory_v2-ROWS ONLY.csv"
 NAME_COL = 1
-MAX_LINES = 100
+debugFile = "debug.log"
+errorFile = "errors.log"
+outputFile = "results.txt"
 
 foundCosIngs = []
 notFoundCosIngs = []
 toxicityCosIngs = []
 therapeuticCosIngs = []
+starttime = time.time()
+
+def setupLogging():
+    if os.path.exists(debugFile):
+      os.remove(debugFile)
+    if os.path.exists(errorFile):
+      os.remove(errorFile)
+    logging.basicConfig(filename=debugFile,level=logging.DEBUG)
+    errors = logging.FileHandler(filename=errorFile)
+    errors.setLevel(logging.ERROR)
+    errors.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
+    logging.getLogger("").addHandler(errors)
 
 def getCid(cname):
     searchURL = compoundRestURL + "name/" + url.quote(cname) + "/XML"
@@ -46,9 +64,8 @@ def searchPubChemForCosIng():
                 foundCosIngs.append((cid, cname, compoundURL + str(cid)))
                 print("Compound Found [" + str(len(foundCosIngs)) + "]")
             else:
-                notFoundCosIngs.append((cid, cname))
-
-            # time.sleep(0.3)
+                notFoundCosIngs.append((lines, cname))
+                logging.info("Ingredient not found on PubChem: %s, line %d", cname, lines)
         
 def hasToxicityInfo(doc):
     heading = doc.find(".//{http://pubchem.ncbi.nlm.nih.gov/pug_view}TOCHeading[.='Toxicity']")
@@ -59,6 +76,7 @@ def hasTherapeuticUse(doc):
     return heading != None
 
 
+setupLogging()
 searchPubChemForCosIng()
 
 print("Checking Compounds for Toxicity Information...")
@@ -67,19 +85,32 @@ for compound in foundCosIngs:
     searchURL = compoundViewURL + str(compound[0]) + "/XML"
     results = http.request("GET", searchURL)
     if results.status == 200:
-        doc = ET.fromstring(results.data)
-        if hasToxicityInfo(doc):
-            toxicityCosIngs.append(compound)
-            print("Toxicity Found [" + str(len(toxicityCosIngs)) + "]")
-        if hasTherapeuticUse(doc):
-            therapeuticCosIngs.append(compound)
-            print("Therapeutic Uses Found [" + str(len(therapeuticCosIngs)) + "]")
+        try:
+            doc = ET.fromstring(results.data)
+            if hasToxicityInfo(doc):
+                toxicityCosIngs.append(compound)
+                print("Toxicity Found [" + str(len(toxicityCosIngs)) + "]")
+            if hasTherapeuticUse(doc):
+                therapeuticCosIngs.append(compound)
+                print("Therapeutic Uses Found [" + str(len(therapeuticCosIngs)) + "]")
+        except ET.ParseError as perr:
+            logging.error("Unable to parse PubChem view for compound cid %d - %s\n %s", compound[0], compound[1], perr.msg)
     else:
-        print("PUG View GET failed: " + str(results.status) + " for cid " + str(cid))
+        logging.error("Failed to GET PUG View: " + str(results.status) + " for CID " + str(compound[0]))
 
+totaltime = time.time() - starttime
+totalmins = int(totaltime / 60)
 
-print("Cosmetic Ingredients Searched: " + str(MAX_LINES))
-print("Compounds found on PubChem: " + str(len(foundCosIngs)))
-print("Compounds with Toxicity Information: " + str(len(toxicityCosIngs)))
-print("Compounds with Therapeutic Uses: " + str(len(therapeuticCosIngs)))
-print("Execution complete.")
+if os.path.exists(outputFile):
+    os.remove(outputFile)
+
+with open(outputFile, "w") as out:
+    out.write("Cosmetic Ingredients Searched: %d\n" % MAX_LINES)
+    out.write("Compounds found on PubChem: %d\n" % len(foundCosIngs))
+    out.write("Compounds with Toxicity Information: %d\n" % len(toxicityCosIngs))
+    out.write("Compounds with Therapeutic Uses: %d\n" % len(therapeuticCosIngs))
+    # out.writelines(therapeuticCosIngs) # TypeError: write() argument must be str, not tuple
+    for compound in therapeuticCosIngs:
+        out.write(" CID [ %d ] %s ( %s )\n" % (compound[0], compound[1], compound[2]))
+
+print("Execution completed in %dm%ds. See %s for the final data." % (totalmins, totaltime % 60, outputFile))

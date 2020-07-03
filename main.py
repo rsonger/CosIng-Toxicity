@@ -8,6 +8,7 @@ import logging
 
 MAX_LINES = 2000
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 http = urllib3.PoolManager()
 
 compoundRestURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/"

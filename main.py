@@ -95,9 +95,9 @@ for compound in foundCosIngs:
                 therapeuticCosIngs.append(compound)
                 print("Therapeutic Uses Found [" + str(len(therapeuticCosIngs)) + "]")
         except ET.ParseError as perr:
-            logging.error("Unable to parse PubChem view for compound cid %d - %s\n %s", compound[0], compound[1], perr.msg)
+            logging.error("Unable to parse PubChem view for compound cid %d - %s\n %s" % (compound[0], compound[1], perr.msg))
     else:
-        logging.error("Failed to GET PUG View: " + str(results.status) + " for CID " + str(compound[0]))
+        logging.error("Failed to GET PUG View: %d status on CID %d" % (results.status, compound[0]))
 
 totaltime = time.time() - starttime
 totalmins = int(totaltime / 60)

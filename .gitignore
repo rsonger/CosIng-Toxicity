@@ -1,6 +1,10 @@
 /.DS_Store
 .vscode/*
+/__pycache__
 debug.log
 errors.log
 results.txt
 template.html
+usage-debug.log
+usage-error.log
+usage-results.txt

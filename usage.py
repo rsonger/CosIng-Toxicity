@@ -5,23 +5,27 @@ import time
 import os
 import logging
 
-http = urllib3.PoolManager()
-namespaces = {"PC": "http://pubchem.ncbi.nlm.nih.gov/pug_view"}
-
+csvOutput = True
 outputFile = "usage-results.txt"
+if csvOutput:
+    outputFile = "./data/CosIngs_list-toxic+therapeutic+cosmetic.csv"
 debugFile = "usage-debug.log"
 errorFile = "usage-error.log"
 dataFile = "./data/CosIngs_list-toxicity+therapeutic_uses.csv"
 compoundURL = "https://pubchem.ncbi.nlm.nih.gov/compound/"
 compoundViewURL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/"
 
-NAME_COL = 1
 CID_COL = 0
+NAME_COL = 1
 URL_COL = 2
 
 foundCosIngs = []
 foundCosUses = []
-totalCosUses = 0
+foundNoCosUses = []
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+http = urllib3.PoolManager()
+namespaces = {"PC": "http://pubchem.ncbi.nlm.nih.gov/pug_view"}
 
 starttime = time.time()
 
@@ -86,9 +90,8 @@ for compound in foundCosIngs:
 
         if len(uses) > 0:
             foundCosUses.append((compound,uses))
-            totalCosUses += 1
         else:
-            foundCosUses.append((compound,"None"))
+            foundNoCosUses.append((compound,"None"))
     else:
         logging.error("Failed to GET PUG View: %d status on CID %d" % (results.status, compound[0]))
 
@@ -99,14 +102,22 @@ if os.path.exists(outputFile):
     os.remove(outputFile)
 
 with open(outputFile, "w") as out:
-    out.write("Cosmetic Ingredients Searched: %d\n" % len(foundCosIngs))
-    out.write("Compounds with Cosmetic Uses: %d\n" % totalCosUses)
-    for compUses in foundCosUses:
-        out.write(" [CID: %d] %s ( %s )\n" % (compUses[0][CID_COL], compUses[0][NAME_COL], compUses[0][URL_COL]))
-        if isinstance(compUses[1], list):
+    if csvOutput:
+        out.write("Compound ID,Compound Name,PubChem URL\n")
+        for cosUse in foundCosUses:
+            comp = cosUse[0]
+            out.write("%d,%s,%s\n" % (comp[CID_COL],comp[NAME_COL],comp[URL_COL]))
+    else:
+        out.write("Cosmetic Ingredients Searched: %d\n" % len(foundCosIngs))
+        out.write("Compounds with Cosmetic Uses: %d\n" % len(foundCosUses))
+        for compUses in foundCosUses:
+            comp = compUses[0]
+            out.write(" [CID: %d] %s ( %s )\n" % (comp[CID_COL], comp[NAME_COL], comp[URL_COL]))
             for use in compUses[1]:
                 out.write("   %s\n" % use)
-        else:
-            out.write("   %s\n" % compUses[1])            
+        for noCosUses in foundNoCosUses:
+            comp = noCosUses[0]
+            out.write(" [CID: %d] %s ( %s )\n" % (comp[CID_COL], comp[NAME_COL], comp[URL_COL]))
+            out.write("   %s\n" % noCosUses[1])
 
 print("Execution completed in %dm%ds. See %s for the final data." % (totalmins, totaltime % 60, outputFile))

@@ -28,9 +28,9 @@ starttime = time.time()
 
 def setupLogging():
     if os.path.exists(debugFile):
-      os.remove(debugFile)
+        os.remove(debugFile)
     if os.path.exists(errorFile):
-      os.remove(errorFile)
+        os.remove(errorFile)
     logging.basicConfig(filename=debugFile,level=logging.DEBUG)
     errors = logging.FileHandler(filename=errorFile)
     errors.setLevel(logging.ERROR)

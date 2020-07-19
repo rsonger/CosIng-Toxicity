@@ -1,5 +1,6 @@
 /.DS_Store
 .vscode/*
+abstracts/*
 /__pycache__
 debug.log
 errors.log
@@ -8,3 +9,5 @@ template.html
 usage-debug.log
 usage-error.log
 usage-results.txt
+abstracts-debug.log
+abstracts-error.log

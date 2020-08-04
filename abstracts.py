@@ -7,20 +7,20 @@ import logging
 import time
 # import nltk
 
-abstractsFolder = "./abstracts/"
+abstractsFolder = "./abstracts-non-toxic/"
 searchResultsFile = "search.xml"
 
 searchURL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=&retmax=%d&term=%s"
 searchTerms = '"%s""adverse effect""skin"'
 queryURL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=PubMed&retmode=xml&ID="
 
-cosmeticUsesFile = "./data/CosIngs_list-toxic+therapeutic+cosmetic.csv"
+cosmeticUsesFile = "./data/Cosings_list+cosmetics+therapeutic_use.csv"
 CID_COL = 0
 NAME_COL = 1
 URL_COL = 2
 
 # How many compounds to search from the top of the list
-MAX_COMPOUNDS = 10
+MAX_COMPOUNDS = 100
 # How many abstracts to download for each compound
 MAX_ABSTRACTS = 10
 

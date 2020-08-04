@@ -1,61 +1,288 @@
-Compound Name, Abstract ID, Compound Frequency, Skin Frequency, Compound-Skin Collocations,60,TOTAL
-ADENOSINE,12507707,10,1,0.071,,
-ALCOHOL,31783104,8,2,0.250,,
-ALCOHOL,28189648,2,4,0.143,,
-ALCOHOL,23385160,1,5,0.125,,
-ALCOHOL,27658323,2,2,0.111,,
-ALCOHOL,31310957,3,1,0.091,,
-BENZOIC ACID,16835129,7,4,0.080,,
-BENZOYL PEROXIDE,11702619,7,1,0.125,,
-BENZOYL PEROXIDE,29911775,5,2,0.050,,
-BENZYL ALCOHOL,28189648,2,4,0.143,,
-CARBON DIOXIDE,3579166,1,3,0.333,,
-CARBON DIOXIDE,12664023,1,5,0.071,,
-CARBON DIOXIDE,24196333,1,6,0.056,,
-CHLORHEXIDINE,21423251,1,1,0.143,,
-CHOLESTEROL,11912565,11,1,0.071,,
-CINEOLE,30097123,6,2,0.154,,
-DIMETHICONE,14555417,30,6,0.182,,
-EDTA,18830865,2,7,0.036,,
-ETHYLHEXYL DIMETHYL PABA,31015895,6,1,0.125,,
-GLASS,20335799,1,1,0.200,,
-GLASS,19304314,1,1,0.167,,
-HEPARIN,9568422,5,3,0.500,,
-HEPARIN,9266063,5,2,0.500,,
-HEPARIN,21945772,4,3,0.400,,
-HEPARIN,29683226,10,6,0.313,,
-HEPARIN,21687550,3,2,0.250,,
-HEPARIN,14631903,2,2,0.250,,
-HEPARIN,19782485,7,3,0.154,,
-HEPARIN,9855179,8,1,0.143,,
-HYDROQUINONE,27521610,1,3,0.125,,
-ISOPROPYL ALCOHOL,27658323,1,2,0.111,,
-LIMONENE,23573938,9,4,0.154,,
-LIMONENE,28189648,1,4,0.143,,
-M-CRESOL,15513822,9,8,0.048,,
-M-CRESOL,16835130,9,5,0.028,,
-MAGNESIUM SULFATE,29278601,1,1,0.143,,
-MENTHOL,11766133,3,2,0.045,,
-NITROUS OXIDE,19921515,3,1,0.091,,
-O-CRESOL,15513822,20,8,0.143,,
-O-CRESOL,16835130,12,5,0.056,,
-P-CRESOL,16835130,12,5,0.056,,
-PABA,31015895,8,1,0.125,,
-PENTASODIUM PENTETATE,18830865,11,7,0.143,,
-PHENOXYETHANOL,18830863,12,6,0.150,,
-POLYETHYLENE,30131113,4,1,0.125,,
-POLYETHYLENE,31670811,1,2,0.077,,
-POLYVINYL ALCOHOL,2310237,1,1,0.067,,
-PROPYLENE GLYCOL,22615634,1,12,0.071,,
-PVP,30741035,2,3,0.091,,
-SILVER,29508105,1,2,0.071,,
-SILVER NITRATE,29508105,1,2,0.071,,
-SULFUR,9316644,1,5,0.071,,
-THYMOL,16835130,6,5,0.028,,
-TRICLOSAN,19822703,3,1,0.250,,
-UREA,28189648,1,4,0.143,,
-UREA,16445510,8,1,0.111,,
-UREA,9430859,1,2,0.048,,
-WHEY,32662602,2,5,0.100,,
-ZINC OXIDE,25565832,1,7,0.067,,
-ZINC OXIDE,29901362,7,1,0.056,,
+Compound Name, Abstract ID, CName Frequency, Skin Freq, Compound-Skin Collocations, Top 0, Top 0 Freq, Top 1, Top 1 Freq, Top 2, Top 2 Freq, Top 3, Top 3 Freq, Top 4, Top 4 Freq
+RESORCINOL,24269627,1,4,0.0,dermal,4,substances,4,exposure,3,regulatory,3,frameworks,3
+CAMPHOR,17499903,0,11,0.0,skin,11,badge,6,3-bc,6,risk,5,derivatives,5
+STEARIC ACID,31356914,0,0,0.0,abstract,1,available,1
+POLYETHYLENE,23064774,0,1,0.0,ingredients,5,panel,4,alkyl,3,peg,3,data,3
+POLYETHYLENE,26940713,1,1,0.0,animals,6,nonacog,5,beta,5,pegol,5,human,3
+POLYETHYLENE,30131113,4,1,0.125,bag,6,warmer,5,polyethylene,4,radiant,4,heat,4
+POLYETHYLENE,30044565,0,4,0.0,group,16,control,11,patients,10,2,7,rfa,5
+POLYETHYLENE,30551891,0,1,0.0,syndrome,6,'s,5,sweet,4,therapy,3,neutrophilic,2
+POLYETHYLENE,26454800,0,1,0.0,pld,5,doxorubicin,4,toxicity,4,liposomal,3,metastatic,2
+POLYETHYLENE,21306564,0,2,0.0,microcirculation,4,lactocapromer,3,terpolymer,3,matrix,3,10,3
+POLYETHYLENE,26331232,0,1,0.0,htg,8,peg,7,patients,5,tg,4,therapy,3
+POLYETHYLENE,31670811,1,2,0.07692307692307693,terpenes,5,deet,4,repellent,4,protection,4,affinity,3
+POLYETHYLENE,25162087,0,1,0.0,pegloticase,7,patients,7,treatment,5,adverse,5,effects,5
+GLYCOLIC ACID,19636068,1,3,0.0,thioglycolates,6,skin,3,irritants,3,thioglycolate,2,used,2
+GLYCOLIC ACID,12518799,1,2,0.0,ga,6,cell,5,acid,4,la,4,cells,4
+ZINC OXIDE,20015351,0,1,0.0,nanoparticles,10,air-liquid,7,interface,7,exposure,7,cell,6
+ZINC OXIDE,27318727,0,2,0.0,swimming,7,nps,6,released,4,sunscreens,3,treatment,3
+ZINC OXIDE,25565821,2,1,0.0,nps,7,assessment,4,part,4,nanomaterials,3,rt-nasa,3
+ZINC OXIDE,28498177,0,8,0.0,skin,8,iad,7,products,5,care,4,study,4
+ZINC OXIDE,28509652,1,3,0.0,zno,10,exposure,6,oral,4,compound,3,risk,3
+ZINC OXIDE,25565832,1,7,0.06666666666666667,zno,9,nps,7,dermally,3,applied,3,experimental,3
+ZINC OXIDE,29901362,7,1,0.05555555555555555,diaper,10,dermatitis,10,talcum,9,group,9,zinc,7
+ARGININE,25565821,1,1,0.0,nps,7,assessment,4,part,4,nanomaterials,3,rt-nasa,3
+ARGININE,20567908,0,1,0.0,pregnancy,12,porphyria,7,women,6,acute,5,diagnosed,5
+ETHYLHEXYL DIMETHYL PABA,31015895,6,1,0.125,paba,8,ethylhexyl,7,dimethyl,7,cell,3,exposure,3
+TRICLOSAN,31015896,1,2,0.0,tcs,8,products,7,based,4,oral,4,scenario,4
+TRICLOSAN,17011099,6,1,0.0,triclosan,6,milk,6,breast,5,exposure,4,human,3
+TRICLOSAN,19822703,3,1,0.25,triclosan,2,application,2,+/-,2,dose,2,standard,2
+ETIDRONIC ACID,25338093,0,1,0.0,nf1,6,bone,6,osteoporosis,4,low,3,mass,3
+PABA,31015895,8,1,0.125,paba,8,ethylhexyl,7,dimethyl,7,cell,3,exposure,3
+ASCORBIC ACID,15153076,3,4,0.0,group,9,recovery,7,aa,4,skin,4,faster,4
+ASCORBIC ACID,19187962,1,1,0.0,psoralens,6,suv-b,5,biomass,4,production,4,plant,3
+LACTIC ACID,31254555,1,3,0.0,confusa,6,w.,5,vivo,4,irritation,4,studies,3
+LACTIC ACID,24301251,1,1,0.0,minimally,2,invasive,2,procedures,2,effects,2,injection,2
+LACTIC ACID,443837,1,0,0.0,acid,3,twins,2,meleda,2,retinoic,2,identical,1
+LACTIC ACID,29149625,1,0,0.0,bacterial,5,carcass,5,acid,4,decontamination,3,surfaces,3
+LACTIC ACID,21929551,0,3,0.0,reactions,4,filler,3,dermal,3,novabel,3,®,3
+LACTIC ACID,23999410,3,3,0.0,extracts,6,acid,6,saline,4,sesame,4,oil,4
+LACTIC ACID,12518799,2,2,0.0,ga,6,cell,5,acid,4,la,4,cells,4
+LACTIC ACID,31407825,1,1,0.0,afb1,11,ex-trp,7,p,7,≤,7,.01,5
+BENZOYL PEROXIDE,11702619,7,1,0.125,benzoyl,7,peroxide,7,combination,7,clindamycin,4,efficacy,4
+BENZOYL PEROXIDE,24002152,1,0,0.0,adapalene,9,bpo,9,group,8,respectively,6,acne,5
+BENZOYL PEROXIDE,21760743,4,1,0.0,combination,11,acne,8,medications,8,clindamycin,5,benzoyl,4
+BENZOYL PEROXIDE,29911775,5,2,0.05,acne,14,silver,12,nanoparticle,12,gel,9,clindamycin,7
+CITRIC ACID,29149625,0,0,0.0,bacterial,5,carcass,5,acid,4,decontamination,3,surfaces,3
+SIMETHICONE,14555417,0,6,0.0,dimethicone,23,methicone,11,using,8,studies,7,adverse,6
+AGAR,10360495,1,0,0.0,renal,4,hemorrhage,3,incidence,3,using,3,siemens,3
+BETAINE,30086255,2,1,0.0,pp,4,wound,4,group,4,application,4,minutes,4
+VALINE,20838200,0,1,0.0,angioedema,6,aceis,3,administration,2,angiotensin,2,arbs,2
+ACETIC ACID,26780674,0,0,0.0,cells,8,2,8,viability,7,irradiated,4,220j/cm,4
+ACETIC ACID,31785315,1,2,0.0,p-tolyl,6,acetate,5,toxicity,5,evaluated,4,environmental,3
+ACETIC ACID,29149625,1,0,0.0,bacterial,5,carcass,5,acid,4,decontamination,3,surfaces,3
+ACETIC ACID,21412803,1,3,0.0,iaa,14,pdt,10,acne,5,treatment,3,incubation,3
+ACETIC ACID,15893446,1,1,0.0,acid,5,concentration,5,ic50,4,fire,3,combustion,3
+ACETIC ACID,16393936,1,2,0.0,tg,6,oral,5,toxicity,5,mg/kg,4,rats,4
+P-CHLORO-M-CRESOL,16835130,2,5,0.0,o-cresol,12,p-cresol,11,cresols,9,toxicity,9,ingredients,8
+EDTA,26780674,0,0,0.0,cells,8,2,8,viability,7,irradiated,4,220j/cm,4
+EDTA,23647455,2,1,0.0,packs,8,dlbc,7,blood,6,use,4,tm,4
+EDTA,18830865,2,7,0.03571428571428571,pentetate,18,pentasodium,11,pentetic,8,acid,8,toxicity,8
+RESVERATROL,28977833,1,1,0.0,tricurin,8,c,6,ccc,5,cells,4,hela,4
+RESVERATROL,16881964,0,7,0.0,skin,7,uv-b,5,photoaging,5,cancer,4,radiation,3
+RESVERATROL,11897547,0,5,0.0,skin,5,cancer,4,use,3,incidence,2,uv,2
+CALCIUM CARBONATE,10150393,0,1,0.0,glove,7,u937,6,hl-60,6,effect,5,cell,5
+POTASSIUM CHLORIDE,21115582,0,0,0.0,propranolol,6,treatment,5,hemangioma,3,adverse,3,therapy,3
+PROLINE,26946987,0,2,0.0,kd,5,psoriasis,4,cases,4,outcomes,3,similar,3
+PROLINE,2310237,3,1,0.0,vitamin,12,chow,9,tumor,8,supplemental,7,irradiation,7
+PROLINE,6343210,0,1,0.0,pressure,6,increase,6,captopril,5,treatment,5,decrease,4
+ISOPROPYL ALCOHOL,27658323,1,2,0.1111111111111111,toxicity,6,cas,6,#,6,material,5,suitable,5
+CYSTEINE,20515439,0,4,0.0,cdnc,9,study,5,oral,4,chromium,3,iii,3
+CYSTEINE,28794555,1,0,0.0,itolizumab,2,number,1,biologics,1,used,1,treatment,1
+CYSTEINE,16499645,0,7,0.0,exposure,9,vocs,6,ae,6,der,5,p,5
+CYSTEINE,30878129,1,0,0.0,ibrutinib,4,effects,4,events,3,bruton,2,tyrosine,2
+WHEY,30945370,5,2,0.0,milk,26,raw,12,cow,9,'s,9,allergic,7
+WHEY,32662602,2,5,0.1,ma'aljobon,7,tpm,6,skin,5,medicine,3,treatment,3
+PROPYLPARABEN,11346481,0,2,0.0,paraben,6,propyl,5,parabens,3,evidence,2,although,2
+PROPYLPARABEN,19101832,8,6,0.0,parabens,26,1,13,rats,12,methylparaben,11,study,10
+ADENOSINE,12507707,10,1,0.07142857142857142,adenosine,10,remifentanil,7,pain,5,postoperative,5,group,5
+ADENOSINE,18318806,1,2,0.0,pdrn,8,healing,5,diabetic,5,mice,5,wound,5
+ADENOSINE,16217724,1,1,0.0,exposure,6,combustion,5,method,5,using,5,concentration,5
+ADENOSINE,19689244,0,2,0.0,effects,5,tyrosine,4,kinase,4,adverse,4,inhibitors,3
+ADENOSINE,23820456,1,2,0.0,ipilimumab,8,vemurafenib,7,treatment,4,response,4,metastatic,3
+ADENOSINE,19400893,1,2,0.0,hookworm,8,infection,8,asthma,5,airway,5,responsiveness,5
+ADENOSINE,28421560,1,7,0.0,acitretin,36,etretinate,11,psoriasis,10,adverse,9,effects,9
+CHOLESTEROL,27397986,1,1,0.0,np,9,fish,8,group,8,exposure,7,days,5
+CHOLESTEROL,31839790,2,1,0.0,n-3,7,flaxseed,7,increased,6,acid,6,days,6
+CHOLESTEROL,10630582,1,1,0.0,ppm,13,seen,9,exposures,7,study,6,levels,6
+CHOLESTEROL,11912565,11,1,0.07142857142857142,cholesterol,10,efflux,10,serum,8,tibolone,7,hdl,7
+CHOLESTEROL,29482765,1,1,0.0,p,10,=,10,rxome3fas,6,adverse,5,[,3
+CHOLESTEROL,9389780,2,4,0.0,oestradiol,9,gel,5,delivering,5,patch,5,women,4
+CHOLESTEROL,23170810,3,1,0.0,plsetn,10,plasma,7,diet,6,plasmalogens,5,rats,5
+CHOLESTEROL,9430859,1,2,0.0,patients,8,+/-,8,diabetic,6,time,5,versus,5
+CHOLESTEROL,12480301,1,4,0.0,body,8,dpe,6,weight,5,increase,5,approximately,4
+CHOLESTEROL,27036332,1,1,0.0,dha-ee,4,findings,4,mg/kg,3,bw/day,3,doses,3
+FOLIC ACID,11214480,1,1,0.0,dapsone,12,treating,5,diseases,5,dose,5,mg,5
+CAFFEINE,18283038,5,1,0.0,phip/hf,7,tea,5,caffeine,5,colon,5,white,4
+CAFFEINE,28288858,1,5,0.0,human,9,exposure,9,internal,6,dermal,5,dose,5
+CAFFEINE,24731971,1,7,0.0,oral,6,pbtk,5,dermal,5,model,5,based,3
+CAFFEINE,12411547,2,0,0.0,intra-arterial,9,99m,9,chemotherapy,8,tc-maa,8,images,6
+PROPIONIC ACID,31242432,0,0,0.0,abstract,1,available,1
+SILVER,32149210,1,1,0.0,tma,8,various,3,health,3,ppm,3,sensor,3
+SILVER,29508105,1,2,0.07142857142857142,amnion,10,showed,3,scaffold,3,activated,3,application,2
+SILVER,20887765,0,1,0.0,vx,5,μg/kg,5,exposure,4,evaluated,3,monkeys,3
+SILVER,16051966,0,2,0.0,rash,9,relationship,4,studies,3,clinical,3,receptor,2
+SILVER,31096606,9,0,0.0,silver,9,np,4,colloidal,3,found,2,healing,2
+SILVER,29911775,12,2,0.0,acne,14,silver,12,nanoparticle,12,gel,9,clindamycin,7
+SILVER,27509256,0,1,0.0,egfr,7,cancers,6,immune,4,foxp3,4,inhibition,3
+SILVER,30291466,2,1,0.0,topical,5,antimicrobials,5,antiseptics,5,antibiotics,5,antimicrobial,4
+SILVER,18028141,0,2,0.0,sm,7,lesions,4,treatment,4,iodine,4,used,3
+SILVER,17207172,4,5,0.0,pemphigus,5,patients,5,cream,5,vulgaris,4,skin,4
+SODIUM THIOSULFATE,32336746,1,1,0.0,cua,5,high,4,metabolic,4,acidosis,4,patients,3
+HEPARIN,9568422,5,3,0.5,skin,3,necrosis,3,effect,2,heparins,2,lmwh,2
+HEPARIN,22136860,1,0,0.0,calcinosis,5,cutis,5,calcium-phosphate,3,product,3,pth,3
+HEPARIN,21687550,3,2,0.25,lmwhs,2,adverse,2,skin,2,necrosis,2,low,1
+HEPARIN,14631903,2,2,0.25,skin,2,necrosis,2,use,2,heparin,2,effect,2
+HEPARIN,29683226,10,6,0.3125,patients,7,skin,6,lesions,6,hit,6,heparin-induced,5
+HEPARIN,19782485,7,3,0.15384615384615385,heparins,6,subcutis,4,calcinosis,4,calcium,4,skin,3
+HEPARIN,9855179,8,1,0.14285714285714285,hit,8,thrombocytopenia,6,heparin,6,thrombosis,4,venous,3
+HEPARIN,21945772,4,3,0.4,heparin,4,flap,4,group,4,venous,3,crisis,3
+HEPARIN,9266063,5,2,0.5,heparin,3,skin,2,lesions,2,thrombocytopenia,2,low-molecular-weight,2
+HEPARIN,1124838,1,1,0.0,patients,8,g-suit,6,intra-abdominal,3,hemorrhage,3,postoperative,2
+FERRIC CHLORIDE,23111879,1,0,0.0,fecl3,7,ph,6,drinking,3,mg,3,assessments,2
+NITROGEN,32632956,1,2,0.0,puva,19,participants,15,evidence,12,trials,10,adverse,10
+NITROGEN,32282734,1,2,0.0,tattooing,3,verruca,3,plana,3,multiple,2,reported,2
+NITROGEN,17535191,1,0,0.0,solar,5,keratosis,5,commonly,2,squamous,2,cell,2
+NITROGEN,29482765,1,1,0.0,p,10,=,10,rxome3fas,6,adverse,5,[,3
+NITROGEN,27494272,0,0,0.0,lesions,6,cryotherapy,5,igh,3,tip,3,treated,3
+NITROGEN,32264420,2,1,0.0,ocnd,7,radical,3,scavenging,3,extract,3,observed,3
+NITROGEN,1296464,1,2,0.0,clinical,3,immunotherapy,3,monitoring,3,extract,3,standardized,3
+NITROGEN,14643696,1,5,0.0,tumor,8,phenoxazine,8,mouse,5,skin,5,agents,4
+NITROGEN,9256171,2,2,0.0,igf-i,12,des,6,1-3,6,graft,4,dgf,4
+NITROGEN,12962523,1,1,0.0,icodextrin,10,dextrose,10,uf,7,peritoneal,6,dialysis,5
+BUTYLPARABEN,19101832,14,6,0.0,parabens,26,1,13,rats,12,methylparaben,11,study,10
+M-CRESOL,16835130,9,5,0.027777777777777776,o-cresol,12,p-cresol,11,cresols,9,toxicity,9,ingredients,8
+M-CRESOL,15513822,9,8,0.047619047619047616,data,10,ingredients,9,5-amino-4-chloro-o-cresol,9,5-amino-6-chloro-o-cresol,8,hair,7
+VINEGAR,32662602,1,5,0.0,ma'aljobon,7,tpm,6,skin,5,medicine,3,treatment,3
+SODIUM CHLORIDE,23237817,0,2,0.0,donor,9,tumescent,8,site,8,modified,6,solution,6
+SODIUM CHLORIDE,18830865,2,7,0.0,pentetate,18,pentasodium,11,pentetic,8,acid,8,toxicity,8
+SODIUM CHLORIDE,23999410,0,3,0.0,extracts,6,acid,6,saline,4,sesame,4,oil,4
+KOJIC ACID,16392817,1,1,0.0,tyrosinase,4,aurones,4,inhibitors,4,different,2,naturally,2
+CARRAGEENAN,21620806,1,1,0.0,ns-9283,8,abt-594,6,nachr,5,pain,5,positive,4
+O-CRESOL,16835130,12,5,0.05555555555555555,o-cresol,12,p-cresol,11,cresols,9,toxicity,9,ingredients,8
+O-CRESOL,15513822,20,8,0.14285714285714285,data,10,ingredients,9,5-amino-4-chloro-o-cresol,9,5-amino-6-chloro-o-cresol,8,hair,7
+ETHYL LACTATE,9671563,0,3,0.0,mg/m3,7,vapor,6,exposure,6,esters,5,lactate,4
+SALICYLIC ACID,18577053,1,0,0.0,cidofovir,5,iv,4,warts,3,report,3,lesions,3
+KAOLIN,31828170,5,1,0.0,gauze,6,hemostasis,5,kaolin-impregnated,5,debridement,4,study,4
+THYMOL,26256176,1,2,0.0,3hb,13,-g-ec,13,ga-g-p,4,t-g-p,4,bio-composites,4
+THYMOL,16835130,6,5,0.027777777777777776,o-cresol,12,p-cresol,11,cresols,9,toxicity,9,ingredients,8
+POLYLACTIC ACID,16240419,1,2,0.0,rf,10,treatment,10,monopolar,7,soft-tissue,4,fillers,4
+POLYLACTIC ACID,12518799,0,2,0.0,ga,6,cell,5,acid,4,la,4,cells,4
+EUGENOL,26723296,0,2,0.0,toxicity,6,use,2,material,2,repeated,2,dose,2
+EUGENOL,26702986,0,2,0.0,toxicity,5,use,2,material,2,reproductive,2,skin,2
+LIMONENE,28189648,1,4,0.14285714285714285,benzyl,6,human,5,llna,4,vitro,3,sensitizers,3
+LIMONENE,23573938,9,4,0.15384615384615385,d-limonene,9,cosmetics,4,humans,4,effects,4,based,3
+HYDROQUINONE,11982639,1,5,0.0,creams,6,use,5,skin,5,adverse,5,women,5
+HYDROQUINONE,21954517,0,0,0.0,abstract,1,available,1
+HYDROQUINONE,30201156,1,1,0.0,disorders,3,also,3,dermoscopy,2,diagnosis,2,used,2
+HYDROQUINONE,27521610,1,3,0.125,hq,10,cosmetic,4,cosmetics,3,×,3,highest,3
+HYDROQUINONE,26684849,2,0,0.0,hq-tgs,6,hq,6,stability,4,zebrafish,4,pigmentation,3
+HYDROQUINONE,24731971,1,7,0.0,oral,6,pbtk,5,dermal,5,model,5,based,3
+FERROUS SULFATE,8262840,3,1,0.0,radiation,10,r-huepo,10,therapy,9,patients,8,hgb,7
+CURCUMIN,28977833,2,1,0.0,tricurin,8,c,6,ccc,5,cells,4,hela,4
+CURCUMIN,11897547,0,5,0.0,skin,5,cancer,4,use,3,incidence,2,uv,2
+CURCUMIN,30291466,1,1,0.0,topical,5,antimicrobials,5,antiseptics,5,antibiotics,5,antimicrobial,4
+GLASS,29735504,1,0,0.0,pulmonary,3,pembrolizumab,2,emboli,2,pneumonia,2,care,2
+GLASS,20335799,1,1,0.2,flow,10,swirling,5,end-to-end,4,platelets,4,anastomosis,3
+GLASS,21404653,3,1,0.0,therapy,11,desensitization,10,drug,9,tuberculosis,8,antituberculosis,7
+GLASS,30628518,0,0,0.0,dermatitis,4,dupilumab,3,atopic,3,reported,2,mechanism,2
+GLASS,14567826,0,1,0.0,manipulation,9,ttc,7,wound,7,ptc,6,cannula,5
+GLASS,19304314,1,1,0.16666666666666666,flow,12,swirling,7,adhesion,6,tube,6,platelet,5
+NIACIN,16617107,0,1,0.0,vasodilation,10,na-induced,8,mice,7,dp1,5,na,4
+NIACIN,17008871,0,5,0.0,acid,8,gpr109a,8,nicotinic,7,2,7,cells,7
+NIACIN,3055921,1,1,0.0,lovastatin,6,patients,6,cholesterol,4,drug,4,clinical,4
+NITROUS OXIDE,12507707,1,1,0.0,adenosine,10,remifentanil,7,pain,5,postoperative,5,group,5
+NITROUS OXIDE,19921515,3,1,0.09090909090909091,procedure,4,use,3,oxide,3,noted,3,cases,3
+NITROUS OXIDE,1524175,1,2,0.0,clonidine,5,group,4,versus,4,patients,3,diazepam,3
+POTASSIUM IODIDE,17650837,0,1,0.0,adverse,3,reaction,3,swellings,3,iodinated,2,contrast,2
+CAPRYLIC ACID,10685018,1,3,0.0,mcts,9,toxicity,7,c,5,body,5,weight/day,4
+TRYPTOPHAN,2314421,5,1,0.0,three,7,patients,5,tryptophan,5,syndrome,3,eosinophilia,3
+TRYPTOPHAN,31407825,2,1,0.0,afb1,11,ex-trp,7,p,7,≤,7,.01,5
+ISOPROPYL PALMITATE,19467074,1,3,0.0,isopropyl,7,esters,5,adverse,5,reactions,5,obtained,4
+RASPBERRY KETONE,31756354,0,2,0.0,4-,7,p-hydroxyphenyl,7,-2-butanone,7,toxicity,6,evaluated,4
+PROPYLENE GLYCOL,18830862,3,2,0.0,methoxyisopropanol,24,ppm,20,inhalation,13,rats,13,produced,9
+PROPYLENE GLYCOL,12676472,1,2,0.0,exposure,7,effects,7,eye,5,ppm,5,subjective,4
+PROPYLENE GLYCOL,25038564,1,5,0.0,efinaconazole,6,topical,3,onychomycosis,3,vehicle,3,systemic,3
+PROPYLENE GLYCOL,22615634,1,12,0.07142857142857142,rat,8,aa-e,7,repaglinide,7,zo-1,6,skin,5
+CHLORHEXIDINE,22639793,0,1,0.0,chg,4,hyperchloremia,2,therapy,2,infant,1,cleansed,1
+CHLORHEXIDINE,275279,4,1,0.0,use,6,chlorhexidine,4,oral,4,used,3,formulations,3
+CHLORHEXIDINE,21423251,1,1,0.14285714285714285,patients,4,cvc,4,crbsi,4,prevention,3,solutions,3
+CHLORHEXIDINE,23560299,6,2,0.0,dressings,9,chlorhexidine,6,patients,5,gluconate-impregnated,3,sites,3
+SILVER NITRATE,29508105,1,2,0.07142857142857142,amnion,10,showed,3,scaffold,3,activated,3,application,2
+RETINOL,9074840,1,8,0.0,retinoids,10,skin,7,retinoid,7,disorders,4,acne,4
+PHENYLALANINE,19187962,1,1,0.0,psoralens,6,suv-b,5,biomass,4,production,4,plant,3
+POLYVINYL ALCOHOL,2310237,1,1,0.06666666666666667,vitamin,12,chow,9,tumor,8,supplemental,7,irradiation,7
+FRUCTOSE,19050411,0,3,0.0,topiramate,8,hypohidrosis,4,children,3,study,3,skin,3
+FRUCTOSE,2314421,0,1,0.0,three,7,patients,5,tryptophan,5,syndrome,3,eosinophilia,3
+BENZOIC ACID,27670220,2,2,0.0,cas,9,#,9,toxicity,6,suitable,6,read,5
+BENZOIC ACID,16835129,7,4,0.08,benzaldehyde,18,acid,8,benzoic,7,rats,6,irritation,5
+BENZYL ALCOHOL,28189648,2,4,0.14285714285714285,benzyl,6,human,5,llna,4,vitro,3,sensitizers,3
+BENZYL ALCOHOL,26364874,0,0,0.0,abstract,1,available,1
+DIMETHICONE,14555417,30,6,0.18181818181818182,dimethicone,23,methicone,11,using,8,studies,7,adverse,6
+P-CRESOL,31785315,1,2,0.0,p-tolyl,6,acetate,5,toxicity,5,evaluated,4,environmental,3
+P-CRESOL,16835130,12,5,0.05555555555555555,o-cresol,12,p-cresol,11,cresols,9,toxicity,9,ingredients,8
+SILICA,30760128,1,6,0.0,hmdz,8,inhalation,8,exposure,8,rats,4,dermal,3
+SILICA,25565821,2,1,0.0,nps,7,assessment,4,part,4,nanomaterials,3,rt-nasa,3
+PHENOXYETHANOL,18830863,12,6,0.15,3-methylamino-4-nitrophenoxyethanol,10,hair,8,data,7,skin,5,mg/kg,5
+PHENOXYETHANOL,31242430,0,0,0.0,abstract,1,available,1
+COLLOIDAL SILVER,31096606,3,0,0.0,silver,9,np,4,colloidal,3,found,2,healing,2
+GALLIC ACID,26256176,1,2,0.0,3hb,13,-g-ec,13,ga-g-p,4,t-g-p,4,bio-composites,4
+GELATIN,10360495,1,0,0.0,renal,4,hemorrhage,3,incidence,3,using,3,siemens,3
+UREA,16445510,8,1,0.1111111111111111,hydroxyurea,7,leg,4,ulcers,4,therapy,4,treatment,2
+UREA,29482765,1,1,0.0,p,10,=,10,rxome3fas,6,adverse,5,[,3
+UREA,28189648,1,4,0.14285714285714285,benzyl,6,human,5,llna,4,vitro,3,sensitizers,3
+UREA,9489309,1,1,0.0,ketorolac,6,administration,5,mg,5,operation,5,postoperative,5
+UREA,19228077,1,4,0.0,sorafenib,23,hepatocellular,12,carcinoma,12,patients,11,advanced,10
+UREA,9256171,2,2,0.0,igf-i,12,des,6,1-3,6,graft,4,dgf,4
+UREA,12962523,1,1,0.0,icodextrin,10,dextrose,10,uf,7,peritoneal,6,dialysis,5
+UREA,9430859,1,2,0.047619047619047616,patients,8,+/-,8,diabetic,6,time,5,versus,5
+UREA,27435804,0,0,0.0,azathioprine,6,methotrexate,6,cyclosporin,6,tests,5,blood,4
+BENZYL BENZOATE,15153076,0,4,0.0,group,9,recovery,7,aa,4,skin,4,faster,4
+SODIUM FLUORIDE,15893446,1,1,0.0,acid,5,concentration,5,ic50,4,fire,3,combustion,3
+ALCOHOL,26447747,0,3,0.0,hc-ht,6,csnps,5,hc,3,dose,3,ad,2
+ALCOHOL,31657870,1,1,0.0,case,7,linezolid,6,adverse,5,effects,5,hypoglycemia,5
+ALCOHOL,27658323,2,2,0.1111111111111111,toxicity,6,cas,6,#,6,material,5,suitable,5
+ALCOHOL,28505119,1,1,0.0,constipation,6,health,5,women,5,japanese,4,daily,4
+ALCOHOL,31310957,3,1,0.09090909090909091,vds,9,patients,7,supplementation,5,cancer,5,may,4
+ALCOHOL,26342767,0,2,0.0,toxicity,6,use,2,material,2,repeated,2,dose,2
+ALCOHOL,31783104,8,2,0.25,alcohol,8,isobutyl,7,toxicity,6,evaluated,4,use,3
+ALCOHOL,28189648,2,4,0.14285714285714285,benzyl,6,human,5,llna,4,vitro,3,sensitizers,3
+ALCOHOL,23385160,1,5,0.125,pea,10,humans,6,dermal,5,rats,5,mg/kg,5
+ALCOHOL,26364874,0,0,0.0,abstract,1,available,1
+MAGNESIUM SULFATE,29278601,1,1,0.14285714285714285,shivering,11,temperature,5,control,5,``,4,treatment,4
+AMMONIUM CHLORIDE,32640297,2,4,0.0,c12-c16,14,adbac,14,ddac,13,available,5,ammonium,3
+MANNITOL,21929551,0,3,0.0,reactions,4,filler,3,dermal,3,novabel,3,®,3
+SODIUM NITRITE,15893446,1,1,0.0,acid,5,concentration,5,ic50,4,fire,3,combustion,3
+ALLANTOIN,25162087,1,1,0.0,pegloticase,7,patients,7,treatment,5,adverse,5,effects,5
+CARBON DIOXIDE,12507707,1,1,0.0,adenosine,10,remifentanil,7,pain,5,postoperative,5,group,5
+CARBON DIOXIDE,3579166,1,3,0.3333333333333333,skin,2,deepithelialization,2,integral,1,part,1,many,1
+CARBON DIOXIDE,12664023,1,5,0.07142857142857142,qsrl,10,laser,7,treatment,7,2,6,patients,6
+CARBON DIOXIDE,24196333,1,6,0.05555555555555555,laser,11,treatment,10,patients,10,yag,8,keloids,7
+CARBON DIOXIDE,9385968,0,4,0.0,passes,9,injury,6,laser,4,depth,4,skin,4
+CARBON DIOXIDE,20633798,0,2,0.0,scars,6,treatment,4,atrophic,4,fractional,4,resurfacing,4
+CARBON DIOXIDE,30225926,1,0,0.0,rhinophyma,7,excision,4,procedural,3,treatment,3,modality,3
+CARBON DIOXIDE,18645090,3,0,0.0,treatment,4,facial,4,long-term,3,carbon,3,dioxide,3
+CARBON DIOXIDE,25348758,1,1,0.0,leishmaniasis,5,scars,5,treatment,4,co2,4,laser,4
+BORIC ACID,10050928,1,0,0.0,ba,13,humans,11,blood,9,b,9,rats,8
+COPPER SULFATE,15908724,0,2,0.0,vitiligo,6,observed,4,children,3,treatment,3,vitix,3
+PALMITIC ACID,31751645,0,0,0.0,abstract,1,available,1
+QUARTZ,20015351,1,1,0.0,nanoparticles,10,air-liquid,7,interface,7,exposure,7,cell,6
+GLYCINE,16835129,1,4,0.0,benzaldehyde,18,acid,8,benzoic,7,rats,6,irritation,5
+LYSINE,27064823,1,3,0.0,increased,4,skin,3,treated,3,jet-m,2,cosmetic,2
+LYSINE,11710934,4,3,0.0,cells,9,quinolone,6,peptides,4,ofloxacin,4,photoallergy,3
+PVP,30741035,2,3,0.09090909090909091,ocular,6,toxicity,5,material,5,systemic,4,test,4
+PVP,11848288,2,0,0.0,plasmid,5,formulated,5,hil-12,4,monkeys,3,effects,3
+CALCIUM PHOSPHATE,22136860,0,0,0.0,calcinosis,5,cutis,5,calcium-phosphate,3,product,3,pth,3
+CALCIUM PHOSPHATE,18485843,1,1,0.0,material,5,composite,5,surface,5,laminin-apatite,4,solution,4
+CALCIUM PHOSPHATE,11074430,0,1,0.0,implants,7,animals,7,diabetic,6,bone,5,response,3
+SODIUM BISULFITE,4552886,1,3,0.0,neomycin-bisulfite,5,bacteria,5,tissue,4,neomycin,4,porcine,4
+TANNIC ACID,24292390,1,1,0.0,gse,8,parotid,6,hypertrophy,5,glands,4,groups,4
+APIGENIN,11897547,0,5,0.0,skin,5,cancer,4,use,3,incidence,2,uv,2
+GLUCOSAMINE,17418928,1,3,0.0,og,11,1,5,group,5,forelimbs,5,animals,4
+ISOBORNEOL,26291250,0,2,0.0,toxicity,6,use,2,material,2,repeated,2,dose,2
+PENTASODIUM PENTETATE,18830865,11,7,0.14285714285714285,pentetate,18,pentasodium,11,pentetic,8,acid,8,toxicity,8
+TITANIUM DIOXIDE,27318727,0,2,0.0,swimming,7,nps,6,released,4,sunscreens,3,treatment,3
+TITANIUM DIOXIDE,23123712,1,1,0.0,nms,8,nsp,3,safety,2,information,2,diverse,1
+TITANIUM DIOXIDE,21609135,0,2,0.0,inhalation,6,following,3,data,3,risk,2,assessment,2
+MENTHOL,11766133,3,2,0.045454545454545456,peppermint,21,oil,17,mentha,9,piperita,9,pulegone,6
+THREONINE,28054548,0,1,0.0,nspefs,8,everolimus,5,mtor,4,inhibitor,3,melanoma,3
+THREONINE,19228077,1,4,0.0,sorafenib,23,hepatocellular,12,carcinoma,12,patients,11,advanced,10
+THREONINE,30737086,0,7,0.0,skin,7,glucocorticoids,5,redd1/fkbp51,5,inhibitors,5,atrophy,3
+AMMONIA,19187962,1,1,0.0,psoralens,6,suv-b,5,biomass,4,production,4,plant,3
+AMMONIA,15893446,1,1,0.0,acid,5,concentration,5,ic50,4,fire,3,combustion,3
+CINEOLE,30097123,6,2,0.15384615384615385,1,8-cineole,6,cells,4,molecular,3,confirmed,3,callistemon,2
+SULFUR,32264420,2,1,0.0,ocnd,7,radical,3,scavenging,3,extract,3,observed,3
+SULFUR,9316644,1,5,0.07142857142857142,kerosine,7,hds,6,toxicity,5,rats,5,observed,5
+SULFUR,16393936,1,2,0.0,tg,6,oral,5,toxicity,5,mg/kg,4,rats,4
+SULFUR,14643696,1,5,0.0,tumor,8,phenoxazine,8,mouse,5,skin,5,agents,4
+SULFUR,29129815,0,0,0.0,sm,10,exposed,3,inflammation,3,biological,2,effect,2
+SULFUR,14700144,5,2,0.0,per,8,cent,8,children,6,scabies,5,treatment,5
+SULFUR,18028141,1,2,0.0,sm,7,lesions,4,treatment,4,iodine,4,used,3
+HYDROGEN PEROXIDE,27318727,1,2,0.0,swimming,7,nps,6,released,4,sunscreens,3,treatment,3
+EUCALYPTOL,30097123,0,2,0.0,1,8-cineole,6,cells,4,molecular,3,confirmed,3,callistemon,2
+SODIUM BENZOATE,27670220,1,2,0.0,cas,9,#,9,toxicity,6,suitable,6,read,5
+SODIUM BENZOATE,16835129,1,4,0.0,benzaldehyde,18,acid,8,benzoic,7,rats,6,irritation,5
+SODIUM BENZOATE,15155391,1,1,0.0,children,5,behaviour,5,artificial,4,colourings,3,diet,3
+THEOPHYLLINE,8893122,1,2,0.0,dirithromycin,15,erythromycin,7,clinical,5,clarithromycin,5,azithromycin,4
+THEOPHYLLINE,11735662,4,1,0.0,corticosteroids,9,adverse,8,effects,8,beta,8,2,8
+THEOPHYLLINE,9935275,2,1,0.0,macrolides,6,children,6,erythromycin,5,clarithromycin,5,azithromycin,5
